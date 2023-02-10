@@ -1,0 +1,23 @@
+"""Escriba su código aquí."""
+
+from exceptions import FileReadError
+from exceptions import FileWriteError
+from exceptions import ProcessError
+from functions import inspect_file
+
+
+def control(file_in, file_out):
+    """Función que devuelve una string dependiendo de su excepción."""
+    try:
+        inspect_file(file_in, file_out)
+
+    except FileReadError as e:
+        return str(
+            f"Se ha producido la excepción FileReadError con el mensaje: '{e}'"
+        )
+
+    except FileWriteError:
+        raise ProcessError("Error de proceso")
+
+    else:
+        return True
