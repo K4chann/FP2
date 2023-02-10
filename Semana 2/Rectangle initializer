@@ -1,0 +1,10 @@
+"""Módulo contenedor de la clase Rectangle."""
+
+
+class Rectangle:
+    """Clase que representa un triángulo."""
+
+    def __init__(self, base: float, altura: float):
+        """Función contructora de la clase."""
+        self.length = base
+        self.width = altura
