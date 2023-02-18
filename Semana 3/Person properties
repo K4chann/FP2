@@ -15,6 +15,30 @@ class Person:
         self.name = name
         self.surname = surname
 
+    @property
+    def name(self):
+        """Propiedad del atributo."""
+        return self.__name
+
+    @name.setter
+    def name(self, name):
+        if type(name) == str and name != "":
+            self.__name = name
+        else:
+            self.__name = "unknown"
+
+    @property
+    def surname(self):
+        """Propiedad del atributo."""
+        return self.__surname
+
+    @surname.setter
+    def surname(self, surname):
+        if type(surname) == str and surname != "":
+            self.__surname = surname
+        else:
+            self.__surname = "unknown"
+
 
 if __name__ == "__main__":
     # Example of use (not part of the solution)
