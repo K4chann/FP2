@@ -9,7 +9,13 @@ class Time:
         self.hour = h
         self.minute = m
 
-    # Put your code here
+    def __repr__(self):
+        """Devuelve la representación formal."""
+        return "Time({}, {})".format(self.hour, self.minute)
+
+    def __str__(self):
+        """Devuelve la representación informal."""
+        return f"{self.hour:02}:".__str__() + f"{self.minute:02}".__str__()
 
 
 if __name__ == "__main__":
