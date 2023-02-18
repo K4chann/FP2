@@ -1,0 +1,26 @@
+"""This module contains the class Point."""
+
+
+class Point:
+    """A point in a plane."""
+
+    def __init__(self, x, y):
+        """Initialize a point with x and y coordinates."""
+        self.x = x
+        self.y = y
+
+    def __repr__(self):
+        """Devuelve la representación formal."""
+        return "Point(x = {}, y = {})".format(self.x, self.y)
+
+    def __str__(self):
+        """Deveulve la representación informal."""
+        return f"{self.x}, {self.y}".__str__()
+
+
+if __name__ == "__main__":
+    # Example of use (not part of the solution)
+
+    p = Point(3.0, 4.5)
+    print("Formal: {}".format(repr(p)))
+    print("Informal: {}".format(p))
