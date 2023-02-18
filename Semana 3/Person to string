@@ -15,6 +15,14 @@ class Person:
         self.name = name
         self.surname = surname
 
+    def __repr__(self):
+        """Devuelve la representación formal."""
+        return "Person(\"{}\", \"{}\")".format(self.name, self.surname)
+
+    def __str__(self):
+        """Devuelve la representación informal."""
+        return f"{self.name} {self.surname}"
+
 
 if __name__ == "__main__":
     # Example of use (not part of the solution)
