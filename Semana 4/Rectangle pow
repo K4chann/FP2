@@ -1,0 +1,32 @@
+"""This module contains the class Rectangle."""
+
+
+class Rectangle:
+    """A quadrilateral with four right angles."""
+
+    def __init__(self, length, width):
+        """Initialize a rectangle with length and width."""
+        self.__length = length
+        self.__width = width
+
+    @property
+    def length(self):
+        """Return the length of the rectangle."""
+        return self.__length
+
+    @property
+    def width(self):
+        """Return the width of the rectangle."""
+        return self.__width
+
+    def __pow__(self, power):
+        """Unary operand for power."""
+        if type(power) == int:
+            if power > 0:
+                return Rectangle(self.__length * power, self.__width * power)
+            elif power == 0:
+                return Rectangle(1, 1)
+            else:
+                return Rectangle(self.__length, self.__width)
+        else:
+            return Rectangle(self.__length, self.__width)
