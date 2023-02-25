@@ -1,0 +1,16 @@
+"""Módulo que contiene a la clase heredera de Time, TimeWithSeconds."""
+
+from mytime import Time
+
+
+class TimeWithSeconds(Time):
+    """Clase heredera de Time."""
+
+    def __init__(self, hour, minute, second):
+        """Construye la clase."""
+        super().__init__(hour, minute)
+        self.second = second
+
+    def __str__(self):
+        """Sustituye la representación formal de la clase super."""
+        return super().__str__() + f":{self.second:02}"
