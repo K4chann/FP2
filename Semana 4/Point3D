@@ -1,0 +1,16 @@
+"""Módulo contenedor de la clase Point3d."""
+
+from point2d import Point2d
+
+
+class Point3d(Point2d):
+    """Clase heredera de Point2d."""
+
+    def __init__(self, x, y, z):
+        """Construye la clase."""
+        super().__init__(x, y)
+        self.z = z
+
+    def coordinates(self):
+        """Redefine el métoodo coordinates super de la clase super."""
+        return tuple(list(super().coordinates()) + [self.z])
