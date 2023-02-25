@@ -1,0 +1,33 @@
+"""Este módulo ofrece la clase SteppedCounter."""
+
+from counter import Counter
+
+
+class SteppedCounter(Counter):
+    """A counter with a custom's step."""
+
+    def __init__(self, step):
+        """Initialize a Counter and add custom's step."""
+        super().__init__()
+        self.__step = step
+
+    @property
+    def step(self):
+        """Return step currentvalue."""
+        return self.__step
+
+    def add_up(self):
+        """Método que sustituye al método de la clase super."""
+        for s in range(self.__step):
+            super().add_up()
+
+
+if __name__ == "__main__":
+    # Example of use (not part of the solution)
+
+    c = SteppedCounter(15)
+    print(c.count)
+    c.add_up()
+    print(c.count)
+    c.add_up()
+    print(c.count)
