@@ -1,0 +1,27 @@
+"""This module offers the class Rectangle."""
+
+
+class Rectangle:
+    """A quadrilateral with four right angles."""
+
+    def __init__(self, length, width):
+        """Initialize a rectangle with length and width."""
+        self.__length = length
+        self.__width = width
+
+    @property
+    def length(self):
+        """Represent the length of the rectangle."""
+        return self.__length
+
+    @property
+    def width(self):
+        """Represent the width of the rectangle."""
+        return self.__width
+
+    def __eq__(self, other):
+        """Unary operand of equality."""
+        if type(other) == Rectangle:
+            return self.length == other.length and self.width == other.width
+        else:
+            return False
