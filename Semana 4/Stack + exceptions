@@ -1,0 +1,46 @@
+"""Module which contains the class Stack."""
+
+from stackexceptions import StackEmptyError
+
+
+class Stack:
+    """Does anything."""
+
+    def __init__(self):
+        """Construct the attributes of the class."""
+        self.stack_value = []
+
+    def push(self, element):
+        """Add an element to the stack."""
+        self.stack_value.append(element)
+
+    def pop(self):
+        """Pop an element from the stack."""
+        if self.is_empty():
+            raise StackEmptyError("The stack is empty.")
+        return self.stack_value.pop()
+
+    @property
+    def top(self):
+        """Stract the most recent element from the stack."""
+        if self.is_empty():
+            raise StackEmptyError("The stack is empty.")
+        return self.stack_value[-1]
+
+    def is_empty(self):
+        """Check if the stack is empty."""
+        return True if len(self.stack_value) == 0 else False
+
+    def __len__(self):
+        """Obtain the number of elements of the stack."""
+        return len(self.stack_value)
+
+# SECOND MODULE (EXCEPTIONS)
+
+"""Module which contains several exceptions."""
+
+
+class StackEmptyError(Exception):
+    """Base class of exceptions."""
+
+    pass
