@@ -1,0 +1,79 @@
+"""This module offers the class Time."""
+
+from timeexceptions import TimeError, HourError, MinuteError
+
+
+class Time:
+    """Represent a time."""
+
+    def __init__(self, h, m):
+        """Initialize Time objects with hours and minutes."""
+        self.hour = h
+        self.minute = m
+
+    @property
+    def hour(self):
+        """Return the hour."""
+        return self.__hour
+
+    @hour.setter
+    def hour(self, value):
+        if not type(value) == int or value < 0:
+            self.__hour = 0
+        elif value > 23:
+            raise HourError("invalid hour", value)
+        else:
+            self.__hour = value
+
+    @property
+    def minute(self):
+        """Return the minute."""
+        return self.__minute
+
+    @minute.setter
+    def minute(self, value):
+        if not type(value) == int or value < 0:
+            self.__minute = 0
+        elif value > 59:
+            raise MinuteError("invalid minute", value)
+        else:
+            self.__minute = value
+
+
+if __name__ == "__main__":
+    # Example of use (not part of the solution)
+    try:
+        t = Time(120, 5)
+        print(f"{t.hour:02}:{t.minute:02}")
+    except TimeError as e:
+        print(type(e), e.args[0], e.value_error)
+
+# SECOND MODULE
+
+"""Module which contains exceptions."""
+
+
+class TimeError(Exception):
+    """Class which represents a time exception."""
+
+    def __init__(self, msg):
+        """Construct the attributes of the class."""
+        pass
+
+
+class HourError(TimeError):
+    """Class which inherit from TimeError and represents an exception."""
+
+    def __init__(self, msg, value_error):
+        """Construct the attributes of the class."""
+        self.value_error = value_error
+        super().__init__(msg)
+
+
+class MinuteError(TimeError):
+    """Class which represents a time exception."""
+
+    def __init__(self, msg, value_error):
+        """Construct the attributes of the class."""
+        self.value_error = value_error
+        super().__init__(msg)
