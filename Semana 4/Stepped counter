@@ -1,0 +1,26 @@
+"""This module contains the class SteppedConuter which extents Counter."""
+
+from counter import Counter
+
+
+class SteppedCounter(Counter):
+    """Clase heredera de la clase Counter."""
+
+    def __init__(self, step):
+        """Método inicializador de la clase."""
+        self.__step = step
+        super().__init__()
+
+    @property
+    def step(self):
+        """Propiedad de lectura de la clase."""
+        return self.__step
+
+
+if __name__ == "__main__":
+    # Example of use (not part of the solution)
+    c = SteppedCounter(3)
+    print(c.count)
+    print(c.step)
+    c.add_up()
+    print(c.count)
