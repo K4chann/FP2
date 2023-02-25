@@ -1,6 +1,9 @@
 """This module implements the class Time."""
 
+from functools import total_ordering
 
+
+@total_ordering
 class Time:
     """Represents a time.
 
@@ -30,3 +33,18 @@ class Time:
     def minute(self):
         """Return the minute of the Time object self."""
         return self.__minute
+
+    def __eq__(self, other):
+        """Unary operand of equality."""
+        if type(other) == Time:
+            return self.hour == other.hour and self.minute == other.minute
+        else:
+            False
+
+    def __lt__(self, other):
+        """Unary operand of comparison."""
+        if type(other):
+            if self.hour == other.hour:
+                return self.minute < other.minute
+            else:
+                return self.hour < other.hour
