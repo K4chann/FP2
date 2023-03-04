@@ -1,0 +1,16 @@
+"""Módulo que contiene un generador."""
+
+
+def strings(lista):
+    """Generador que devuelve uno por uno los elementos str de una lista."""
+    counter = 1
+
+    while counter <= len(lista):
+        if type(lista[counter - 1]) == str:
+            yield lista[counter - 1]
+        counter += 1
+
+
+if __name__ == "__main__":
+    for i in strings([5, "uno", 10.8, "dos", 3, 4, "tres", 5]):
+        print(i)
