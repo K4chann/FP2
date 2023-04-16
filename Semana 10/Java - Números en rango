@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void showNumbers(int num1, int num2) {
+        for (int i = num1; i <= num2; i++) {
+            System.out.println(i);
+        }
+    }
+    
+    
+    
+    public static void main(String[] args) {
+         Scanner input = new Scanner(System.in);
+         System.out.print("primer número : ");
+         int inf = input.nextInt();
+         System.out.print("segundo número: ");
+         int sup = input.nextInt();
+         showNumbers(inf, sup);
+    }
+}
