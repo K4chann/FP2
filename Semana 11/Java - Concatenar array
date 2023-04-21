@@ -1,0 +1,15 @@
+public class ArrayTools {
+	public static String concatenar (String[] array, String value) {
+	    String result = new String();
+	    
+	    for (int i = 0; i < array.length; i++) {
+	        result += (i == array.length - 1) ? array[i]: array[i] + value;
+	    }
+	    return result;
+	}
+	
+	public static void main (String[] args) {
+	    String[] palabras = {"uno", "dos", "tres"};
+	    System.out.println(concatenar(palabras,"-")); // "uno-dos-tres"
+	}
+}
