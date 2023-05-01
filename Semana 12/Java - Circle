@@ -1,0 +1,19 @@
+class Circle {
+    private double radio;
+    
+    public Circle(double value) {
+        this.radio = value;
+    }
+    
+    public double getRadious() {
+        return this.radio;
+    }
+    
+    public void setRadious(double newValue) {
+        this.radio = newValue;
+    }
+    
+    public double area() {
+        return Math.PI * Math.pow(this.radio, 2);
+    }
+}
