@@ -1,0 +1,33 @@
+import java.util.Arrays;
+
+public class Rectángulo {
+	private double base, altura;
+    
+    public Rectángulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+    
+    public double getBase() {
+        return this.base;
+    }
+    
+    public double getAltura() {
+        return this.altura;
+    }
+    
+    @Override
+    public boolean equals(Object other) {
+        if (other instanceof Rectángulo) {
+            Rectángulo obj = (Rectángulo) other;
+            return this.getBase() == obj.getBase() && this.getAltura() == obj.getAltura();
+        } else {
+            return false;
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return "Rectángulo de base: " + this.base + " y altura: " + this.altura;
+    }
+}
