@@ -1,0 +1,30 @@
+import java.util.Arrays;
+
+public class Point2D {
+	protected double x, y;
+    
+    public Point2D(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+    
+    public double[] coordinates() {
+        double[] result = {this.x, this.y};
+        return result;
+    }
+    
+    @Override
+    public boolean equals(Object other) {
+        if (other instanceof Point2D) {
+            Point2D obj = (Point2D) other;
+            return Arrays.equals(this.coordinates(), obj.coordinates());
+        } else {
+            return false;
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return Arrays.toString(this.coordinates()).replace("[", "(").replace("]", ")");
+    }
+}
