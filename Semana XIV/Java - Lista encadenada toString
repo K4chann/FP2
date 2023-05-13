@@ -1,0 +1,21 @@
+public class PrintableListOfInt extends ListOfInt {
+    public PrintableListOfInt() {
+        super();
+    }
+    
+    /**
+    * Método que devuelve la representación como string de la LinkedList.
+    * Su representación seguirá el formato (length)[elements*].
+    */
+    public String toString() {
+        String str = "(" + this.length + ")" + "[";
+        
+        Node current = this.first;
+        while (current != null) {
+            str += (current.next != null) ? current.data + ", ": current.data;
+            current = current.next;
+        }
+        str += "]";
+        return str;
+    }
+}
