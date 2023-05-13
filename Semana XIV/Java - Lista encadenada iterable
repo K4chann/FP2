@@ -1,0 +1,31 @@
+import java.util.Iterator;
+import java.lang.Iterable;
+
+public class IterableListOfInt extends ListOfInt implements Iterable<Integer> {
+    
+    public IterableListOfInt() {
+        super();
+    }
+    
+    public Iterator<Integer> iterator() {
+        return new ListIterator(this.first);
+    }
+    
+    private class ListIterator implements Iterator<Integer> {
+        private Node current;
+        
+        private ListIterator(Node first) {
+            this.current = first;
+        }
+        
+        public boolean hasNext() {
+            return current != null;
+        }
+        
+        public Integer next() {
+            Integer value = current.data;
+            current = current.next;
+            return value;
+        }
+    }
+}
