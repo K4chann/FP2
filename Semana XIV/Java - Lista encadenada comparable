@@ -1,0 +1,33 @@
+public class ComparableListOfInt extends ListOfInt implements Comparable<ComparableListOfInt> {
+    public ComparableListOfInt() {
+        super();
+    }
+    
+    /** Método que compara dos listas, devolviendo -1 si la primera es menor
+     * 1 si lo es la segunda o 0 si son iguales.
+    */
+    public int compareTo(ComparableListOfInt linkedList) {
+        ComparableListOfInt other = (ComparableListOfInt) linkedList;
+        
+        Node currentThis = this.first;
+        Node currentOther = other.first;
+        
+        while (currentThis != null && currentOther != null) {
+            
+            if (currentThis.data < currentOther.data) {
+                return -1;
+            } else if (currentThis.data > currentOther.data) {
+                return 1;
+            }
+            
+            currentThis = currentThis.next;
+            currentOther = currentOther.next;
+        }
+        
+        if (currentThis == null && currentOther == null) {
+            return 0;
+        } else {
+            return (currentThis == null) ? -1: 1;
+        }
+    }
+}
