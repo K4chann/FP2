@@ -1,0 +1,13 @@
+public class ChildListOfInt extends ListOfInt {
+    public ChildListOfInt() {
+        super();
+    }
+    
+    public String toString() {
+        return "(" + this.length + ")" + super.toString();
+    }
+    
+    public int getLength() {
+        return this.length;
+    }
+}
