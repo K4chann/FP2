@@ -1,0 +1,29 @@
+public class EquatableListOfInt extends ListOfInt {
+
+    public EquatableListOfInt() {
+        super();
+    }
+
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof EquatableListOfInt)) {
+            return false;
+        }
+        EquatableListOfInt other = (EquatableListOfInt) obj;
+        if (this.length != other.length) {
+            return false;
+        }
+        Node currentThis = this.first;
+        Node currentOther = other.first;
+        while (currentThis != null && currentOther != null) {
+            if (currentThis.data != currentOther.data) {
+                return false;
+            }
+            currentThis = currentThis.next;
+            currentOther = currentOther.next;
+        }
+        return true;
+    }
+}
