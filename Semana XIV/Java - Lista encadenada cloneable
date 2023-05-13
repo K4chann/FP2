@@ -1,0 +1,26 @@
+public class CloneableListOfInt extends ListOfInt implements Cloneable {
+    
+    public CloneableListOfInt() {
+        super();
+    }
+    
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        CloneableListOfInt newList = (CloneableListOfInt) super.clone();
+        
+        if (this.first != null) {
+            newList.first = new Node(this.first.data);
+            Node newNode = newList.first;
+            Node current = this.first.next;
+            
+            while (current != null) {
+                newNode.next = new Node(current.data);
+                newNode = newNode.next;
+                current = current.next;
+            }
+        }
+        
+        newList.length = this.length;
+        return newList;
+    }
+}
