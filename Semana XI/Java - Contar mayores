@@ -4,7 +4,7 @@ public class ArrayTools {
         
         for (double item: myArray) {
             if (item > value) {
-                counterGreater += 1;
+                counterGreater++;
             }
         }
         return counterGreater;
