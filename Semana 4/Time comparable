@@ -38,13 +38,13 @@ class Time:
         """Unary operand of equality."""
         if type(other) == Time:
             return self.hour == other.hour and self.minute == other.minute
-        else:
-            False
+        False
 
     def __lt__(self, other):
         """Unary operand of comparison."""
-        if type(other):
+        if type(other) == Time:
             if self.hour == other.hour:
                 return self.minute < other.minute
             else:
                 return self.hour < other.hour
+        return False
