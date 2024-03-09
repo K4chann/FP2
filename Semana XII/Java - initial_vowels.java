@@ -8,7 +8,15 @@ public class Functions {
 	    
 	    if (text.length() > 0) {
 	        for (String word: splittedText) {
-                counter += (vowels.contains(((Character) word.charAt(0)).toString())) ? 1:0;
+                if (
+                    vowels.contains(
+                            (
+                                (Character) word.charAt(0)
+                            ).toString()
+                        )
+                ) {
+                    counter++;
+                }
 	        }
 	    }
 	    return counter;
