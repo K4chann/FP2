@@ -62,3 +62,10 @@ class LinkedList:
                 return True
             current = current.next_node
         return False
+    
+if __name__ == "__main__":
+    l = LinkedList()
+    for num in range(10):
+        l.insert(len(l) - 1 if len(l) > 0 else len(l), num)
+    
+    print(l.contains(10))
