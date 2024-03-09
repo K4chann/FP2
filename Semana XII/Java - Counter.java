@@ -6,14 +6,14 @@ public class Counter {
     }
     
     public void step() {
-        this.counter += 1;
+        this.counter++;
     }
     
     public int getValue() {
-        return this.counter;
+        return counter;
     }
     
     public void reset() {
-        this.counter = 0;
+        counter = 0;
     }
 }
