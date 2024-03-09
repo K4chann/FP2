@@ -11,5 +11,6 @@ class Suma {
         System.out.print("Dame otro número entero: ");
         int b = input.nextInt();
         System.out.print(a + b);
+        input.close();
     }
 }
