@@ -10,13 +10,13 @@ public class ArrayTools {
 	        int pos = 0;
 	        
 	        while (pos < colocados && item < newArray[pos]) {
-	            pos += 1;
+	            pos++;
 	        }
 	        for (int pos2 = colocados; pos2 > pos; pos2--) {
 	            newArray[pos2] = newArray[pos2 - 1];
 	        }
 	        newArray[pos] = item;
-	        colocados += 1;
+	        colocados++;
 	    }
 	    return newArray;
 	}
