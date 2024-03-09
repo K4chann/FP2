@@ -3,12 +3,9 @@
 
 def divisors(stop):
     """Generador de divisores de un entero positivo."""
-    current = 0
-    divs = [i for i in range(1, stop + 1) if stop % i == 0]
-
-    while current <= len(divs) - 1:
-        yield divs[current]
-        current += 1
+    for num in range(1, stop + 1):
+        if stop % num == 0:
+            yield num
 
 
 if __name__ == "__main__":
