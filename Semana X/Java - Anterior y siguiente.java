@@ -10,5 +10,6 @@ class Adyacentes {
         int num = input.nextInt();
         System.out.println(num - 1);
         System.out.println(num + 1);
+        input.close();
     }
 }
