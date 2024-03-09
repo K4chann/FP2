@@ -10,11 +10,12 @@ public class Main {
     
     
     public static void main(String[] args) {
-         Scanner input = new Scanner(System.in);
-         System.out.print("primer número : ");
-         int inf = input.nextInt();
-         System.out.print("segundo número: ");
-         int sup = input.nextInt();
-         showNumbers(inf, sup);
+        Scanner input = new Scanner(System.in);
+        System.out.print("Primer número : ");
+        int inf = input.nextInt();
+        System.out.print("Segundo número: ");
+        int sup = input.nextInt();
+        showNumbers(inf, sup);
+        input.close();
     }
 }
