@@ -9,8 +9,9 @@ public class Main {
     
     public static void main(String[] args) {
          Scanner input = new Scanner(System.in);
-         System.out.print("Kilometros: ");
+         System.out.print("Kilómetros: ");
          double km = input.nextDouble();
          System.out.println("Millas    : " + km2mi(km));
+         input.close();
     }
 }
