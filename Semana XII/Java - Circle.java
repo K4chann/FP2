@@ -1,4 +1,4 @@
-class Circle {
+public class Circle {
     private double radio;
     
     public Circle(double value) {
@@ -10,7 +10,10 @@ class Circle {
     }
     
     public void setRadious(double newValue) {
-        this.radio = newValue;
+        // Se debería controlar el valor del radio, pero no es necesario en estos ejercicios
+        // Una posible solución es almacenar el valor absoluto.
+        // this.radio = (newValue >= 0) newValue : -newValue;
+        radio = newValue;
     }
     
     public double area() {
