@@ -9,21 +9,19 @@ public class Rectángulo {
     }
     
     public double getBase() {
-        return this.base;
+        return base;
     }
     
     public double getAltura() {
-        return this.altura;
+        return altura;
     }
     
     @Override
     public boolean equals(Object other) {
-        if (other instanceof Rectángulo) {
-            Rectángulo obj = (Rectángulo) other;
-            return this.getBase() == obj.getBase() && this.getAltura() == obj.getAltura();
-        } else {
-            return false;
-        }
+        if (this == other) return true;
+        if (other.getClass() != other.getClass() || other == null) return false;
+        Rectángulo obj = (Rectángulo) other;
+        return this.getBase() == obj.getBase() && this.getAltura() == obj.getAltura();
     }
     
     @Override
