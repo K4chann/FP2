@@ -45,5 +45,5 @@ class Evens:
             raise StopIteration
 
 if __name__ == "__main__":
-for i in Evens(10):
-    print(i)
+    for i in Evens(10):
+        print(i)
