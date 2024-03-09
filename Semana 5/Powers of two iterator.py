@@ -38,12 +38,12 @@ class PowersOfTwo:
     def __next__(self):
         """Método que pasa al siguiente paso de la iteración."""
         if self.current < self.stop:
-            result = 2**self.current
+            result = 1 << self.current # Se elige el desplazamiento lógico debido a su eficiencia
             self.__current += self.step
             return result
         else:
             raise StopIteration
 
 if __name__ == "__main__":
-for i in PowersOfTwo(7):
-    print(i)
+    for i in PowersOfTwo(7):
+        print(i)
