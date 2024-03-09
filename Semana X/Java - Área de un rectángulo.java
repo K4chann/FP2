@@ -11,5 +11,6 @@ class Area {
         System.out.print("Altura: ");
         int altura = input.nextInt();
         System.out.println(base*altura);
+        input.close();
     }
 }
