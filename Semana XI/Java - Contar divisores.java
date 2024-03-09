@@ -4,7 +4,7 @@ public class ArrayTools {
 	    
 	    for (int item: myArray) {
 	        if (item % value == 0) {
-	            counter += 1;
+	            counter++;
 	        }
 	    }
 	    return counter;
