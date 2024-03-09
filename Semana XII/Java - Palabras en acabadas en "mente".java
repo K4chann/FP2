@@ -5,7 +5,8 @@ public class ArrayTools {
 	    String result[] = Arrays.copyOf(text, text.length);
 	    
 	    for (int i = 0; i < result.length; i++) {
-	        result[i] = (result[i].contains("mente") && result[i].endsWith("mente")) ? result[i].replace("mente", ""):result[i];
+	        result[i] = (result[i].contains("mente") && result[i].endsWith("mente")) ?
+                result[i].replace("mente", "") : result[i];
 	    }
 	    return result;
 	}
