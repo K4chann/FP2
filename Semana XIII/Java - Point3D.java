@@ -9,17 +9,15 @@ public class Point3D extends Point2D {
     }
 
     public double getZ() {
-        return this.z;
+        return z;
     }
 
     @Override
     public boolean equals(Object other) {
-        if (other instanceof Point3D) {
-            Point3D obj = (Point3D) other;
-            return super.equals(new Point2D(this.x, this.y)) && this.z == obj.z;
-        } else {
-            return false;
-        }
+        if (this == other) return true;
+        if (other.getClass() != getClass() || other == null) return false;
+        Point3D obj = (Point3D) other;
+        return super.equals(new Point2D(this.x, this.y)) && this.z == obj.z;
     }
 
     @Override
