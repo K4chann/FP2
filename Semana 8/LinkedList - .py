@@ -14,7 +14,7 @@ class LinkedList:
 
     def __init__(self):
         """Incializa una lista vacía."""
-        self.__first = None
+        self.__first = self.__last = None
         self.__len = 0
 
     def __len__(self):
@@ -36,6 +36,7 @@ class LinkedList:
         else:
             if where == 0:
                 self.__first = self.Node(value, self.__first)
+                self.__last = self.__first
             elif where == len(self):
                 new_node = self.Node(value)
                 self.__last.next_node = new_node
@@ -72,3 +73,15 @@ class LinkedList:
             else:
                 prev = curr
                 curr = curr.next_node if curr is not None else None
+
+if __name__ == "__main__":
+    l = LinkedList()
+    for num in range(10):
+        l.insert(num, num)
+
+    l.remove(5)
+
+    for num in l:
+        print(num)
+    
+    
