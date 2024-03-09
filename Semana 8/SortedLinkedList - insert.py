@@ -36,14 +36,38 @@ class SortedLinkedList:
         if self.__first is None:
             self.__first = new_node
         else:
-            if self.__first.value >= value:
-                new_node.next_node = self.__first
-                self.__first = new_node
-            else:
-                c = self.__first
-                while c.next_node is not None and c.next_node.value < value:
-                    c = c.next_node
+            prev = None
+            current = self.__first
 
-                new_node.next_node = c.next_node
-                c.next_node = new_node
+            while current is not None and \
+                    current.value < value:
+                prev = current
+                current = current.next_node
+
+            if prev is None:
+                self.__first = new_node   
+            else:
+                prev.next_node = new_node
+
+            new_node.next_node = current
+
         self.__len += 1
+
+if __name__ == "__main__":
+    l = SortedLinkedList()
+    for num in range(10):
+        l.insert(num)
+
+    for num in l:
+        print(num)
+    
+    l.insert(90)
+    l.insert(-5)
+    l.insert(-3)
+
+    print("=====================")
+
+    for num in l:
+        print(num)
+
+    
