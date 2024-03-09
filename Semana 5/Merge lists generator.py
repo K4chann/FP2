@@ -3,17 +3,10 @@
 
 def browse_lists(lista1, lista2):
     """Devuelve iterativamente los elementos de una lista y de otra."""
-    counter = 1
-    alternate = 0
 
-    while counter <= min(len(lista1), len(lista2)):
-        if alternate == 0:
-            yield lista1[counter - 1]
-            alternate = 1
-        else:
-            yield lista2[counter - 1]
-            alternate = 0
-            counter += 1
+    for index in range(min(len(lista1), len(lista2))):
+        yield lista1[index]
+        yield lista2[index]
 
 
 if __name__ == "__main__":
