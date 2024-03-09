@@ -2,7 +2,10 @@ import java.util.Arrays;
 
 public class ArrayTools {
 	public static int[] listsMaxs (int[] array1, int[] array2) {
-	    int[] newArray = new int[array1.length];
+	    int[] newArray = new int[
+            (array1.length <= array2.length) ?
+            array1.length : array2.length
+        ];
 	    
 	    for (int i = 0; i < array1.length; i++) {
 	        newArray[i] = (array1[i] > array2[i]) ? array1[i]: array2[i];
