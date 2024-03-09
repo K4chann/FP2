@@ -19,5 +19,6 @@ public class Functions {
 	    int n = input.nextInt();
 	    int f = fibo(n);
 	    System.out.print(String.format("El %dº número de Fibonacci es: %d", n, f));
+        input.close();
 	}
 }
