@@ -3,12 +3,10 @@
 
 def strings(lista):
     """Generador que devuelve uno por uno los elementos str de una lista."""
-    counter = 1
 
-    while counter <= len(lista):
-        if type(lista[counter - 1]) == str:
-            yield lista[counter - 1]
-        counter += 1
+    for item in lista:
+        if type(item) == str:
+            yield item
 
 
 if __name__ == "__main__":
