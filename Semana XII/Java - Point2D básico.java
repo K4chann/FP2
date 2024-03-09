@@ -1,6 +1,6 @@
-class Point2D {
-    double coordX;
-    double coordY;
+public class Point2D {
+    private double coordX;
+    private double coordY;
     
     public Point2D(double value1, double value2) {
         this.coordX = value1;
@@ -8,18 +8,18 @@ class Point2D {
     }
     
     public double getX() {
-        return this.coordX;
+        return coordX;
     }
     
     public double getY() {
-        return this.coordY;
+        return coordY;
     }
     
     public void setX(double newValue) {
-        this.coordX = newValue;
+        coordX = newValue;
     }
     
     public void setY(double newValue) {
-        this.coordY = newValue;
+        coordY = newValue;
     }
 }
