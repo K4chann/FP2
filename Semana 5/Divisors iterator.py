@@ -59,5 +59,5 @@ class Divisors:
             raise StopIteration
 
 if __name__ == "__main__":
-for i in Divisors(12):
-    print(i)
+    for i in Divisors(12):
+        print(i)
