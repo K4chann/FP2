@@ -1,3 +1,4 @@
+"""
 ENUNCIADO -->
 
 -->
@@ -11,7 +12,7 @@ There is not a written main module.
 ------------------------------------------------------------------------------------------------------------------------------
 SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------
 ------------------------------------------------------------------------------------------------------------------------------
-
+"""
 """Módulo que contiene la clase Velero, que hereda de la clase Barco."""
 
 from clases import Barco
