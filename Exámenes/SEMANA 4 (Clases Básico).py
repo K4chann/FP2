@@ -1,3 +1,4 @@
+"""
 ENUNCIADO -->
 Se desea crear una clase llamada Matriz para representar objetos de tipo matriz. Los métodos que suministrarán los objetos de esta clase serán los siguientes:
 
@@ -22,7 +23,7 @@ get_str => [1, 0, 0, 0]
 ----------------------------------------------------------------------------------------------------------------------------------------
 MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------
 ----------------------------------------------------------------------------------------------------------------------------------------
-
+"""
 """Ejemplo de uso de la función requerida."""
 
 from solution import Matriz
@@ -45,11 +46,11 @@ for i, m in enumerate(ms):
     print("nfilas", mat.nfilas())
     print("ncolumnas", mat.ncolumnas())
     print("Representación ", mat.get_str())
-    
+"""
 ------------------------------------------------------------------------------------------------------------------------------
 SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------
 ------------------------------------------------------------------------------------------------------------------------------
-
+"""
 """Module with the answer to the problem."""
 
 from copy import deepcopy
