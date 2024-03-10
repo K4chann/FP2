@@ -1,3 +1,4 @@
+/*
 ENUNCIADO -->
 Añada a la clase ArrayTools un método public static int[] procesar(int[] v1, int[] v2). Los arrays v1 y v2 contienen solo números mayores que cero. El método debe devolver un nuevo array de números enteros cuyo tamaño será igual al del más corto de los dos arrays pasados como parámetros.
 
@@ -14,18 +15,18 @@ resultado  = [ 8, 3, 2, 9, 2, 7, 8]
 ----------------------------------------------------------------------------------------------------------------------------------------
 MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------
 ----------------------------------------------------------------------------------------------------------------------------------------
-
+*/
 import java.util.Arrays;
 
 public class ArrayTools {
 	// Escriba aquí su código
 	
 }
-
+/*
 ------------------------------------------------------------------------------------------------------------------------------
 SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------
 ------------------------------------------------------------------------------------------------------------------------------
-
+*/
 import java.util.Arrays;
 
 public class ArrayTools {
