@@ -1,3 +1,4 @@
+"""
 ENUNCIADO -->
 Se desea crear una clase llamada Rectangulo para representar rectángulos en  un plano de dos dimensiones. Los lados de los rectángulos a representar son paralelos a los ejes x e y. Para representar los rectángulos se parte de los dos puntos que representan su límite inferior izquierdo y el límite superior derecho.
 
@@ -24,6 +25,7 @@ Representación <(2, 3), (3.5, 4.5)>
 ----------------------------------------------------------------------------------------------------------------------------------------
 MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------
 ----------------------------------------------------------------------------------------------------------------------------------------
+"""
 """Ejemplo de uso de la funciones requerida."""
 
 from solution import Rectangulo, Punto, BadRectangle
