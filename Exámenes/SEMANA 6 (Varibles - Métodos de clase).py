@@ -1,3 +1,4 @@
+"""
 ENUNCIADO -->
 Realice las siguientes acciones:
 
@@ -12,7 +13,7 @@ Añada a la clase ColorRGB un propiedad de solo lectura llamada nombre que de el
 ----------------------------------------------------------------------------------------------------------------------------------------
 MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------MAIN MODULE------
 ----------------------------------------------------------------------------------------------------------------------------------------
-
+"""
 """Clase a modificar para el ejercicio."""
 
 
