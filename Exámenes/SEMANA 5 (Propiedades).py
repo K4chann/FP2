@@ -49,11 +49,11 @@ for p1, p2 in tests:
 
     except BadRectangle as err:
         print(f"Rectángulo erróneo {p1.get_str()} {p2.get_str()}")
-
+"""
 ------------------------------------------------------------------------------------------------------------------------------
 SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------SOLUTION MODULE------
 ------------------------------------------------------------------------------------------------------------------------------
-
+"""
 """Module with the answer to the problem."""
 
 # AÑADA AQUÍ LA CLASE Rectangulo
